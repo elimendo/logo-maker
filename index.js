@@ -1,7 +1,7 @@
 const inquirer = require('inquirer')
 const fs = require("fs")
 const path = require("path")
-
+const Text = require("./lib/Text")
 const questions = [
     {
         type: "input",
@@ -25,13 +25,15 @@ const questions = [
     {
         type: "input",
         name: "shapeColor",
-        message: "Pick a color for shape color"
+        message: "Pick a color for your shape"
     },
 ];
 
 function init() {
     inquirer.prompt(questions).then((answers)=>{
-        console.log(answers)
+        // console.log(answers)
+        const text = new Text(answers.char, answers.txtColor)
+        console.log(text.print())
     }) 
 }
 init()
