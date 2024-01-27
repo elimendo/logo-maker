@@ -1,7 +1,11 @@
 const inquirer = require('inquirer')
-const fs = require("fs")
+const {writeFile} = require("fs/promises")
 const path = require("path")
 const Text = require("./lib/Text")
+const {Circle, Square, Triangle} = require('./lib/Shape')
+const Svg =  require("./lib/Svg")
+
+
 const questions = [
     {
         type: "input",
@@ -33,7 +37,23 @@ function init() {
     inquirer.prompt(questions).then((answers)=>{
         // console.log(answers)
         const text = new Text(answers.char, answers.txtColor)
-        console.log(text.print())
+        // console.log(text.print())
+
+        let shape;
+
+        if(answers.shape === "Circle"){
+            shape = new Circle(answers.shapeColor)
+        } else if (answers.shape === "Square"){
+            shape = new Square(answers.shapeColor)
+        } else if (answers.shape === "Triangle"){
+            shape = new Triangle(answers.shapeColor)
+        }
+
+        // console.log(shape.print())
+
+        const svg = new Svg(text, shape)
+
+        writeFile("logo.svg", svg.print())
     }) 
 }
 init()
