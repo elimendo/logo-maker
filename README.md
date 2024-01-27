@@ -10,7 +10,7 @@
  To download or use this application go to my GitHub, and clone it to one of your repo's.
 
  ## Usage
- This application is great if you need a simple but clean logo efficiently. The possibilities are endless! Get creative mix and math words, get quirky and spell cat with a pink  triangle background! 
+ This application is great if you need a simple but clean logo efficiently. The possibilities are endless! Get creative mix and math words, get quirky, and spell cat with a pink  triangle background! 
 
  ## Credits
   Credits to me I built this brick-by-brick
@@ -20,3 +20,8 @@
 
   ## Tests
   to run the tests simply go to the console and type in "npm run test"
+
+[logo maker.webm](https://github.com/elimendo/logo-maker/assets/148833152/6ca8fda4-bea0-48b4-9306-c5f2bf0e29bf)
+
+https://github.com/elimendo/logo-maker
+https://elimendo.github.io/logo-maker/
